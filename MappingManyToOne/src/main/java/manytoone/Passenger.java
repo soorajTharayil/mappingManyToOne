@@ -1,6 +1,8 @@
 package manytoone;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -8,6 +10,7 @@ import javax.persistence.ManyToOne;
 public class Passenger {
   
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int passengerId;
 	String passengerName;
 	
